@@ -1,4 +1,4 @@
-import SearchView from './component/pages/SearchView';
+import MainView from './component/pages/main/MainView';
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
 
@@ -7,7 +7,7 @@ import './App.css';
 const App = (): JSX.Element => {
   return (
       <Routes>
-          <Route path='/' element={<SearchView />}/>
+          <Route path='/' element={<MainView />}/>
       </Routes>
   )
 }
