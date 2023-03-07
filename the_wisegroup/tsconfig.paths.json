@@ -2,8 +2,10 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@css/*": ["src/component/css/*"],
-      "@pages/*": ["src/component/pages/*"]
+      "@css/*": ["src/css/*"],
+      "@pages/*": ["src/pages/*"],
+      "@component/*": ["src/component/*"],
+      "@assets/*": ["src/assets/*"]
     }
   }
 }
