@@ -1,6 +1,6 @@
-import MainView from './component/pages/main/MainView';
+import MainView from '@pages/main/MainView';
 import TmpView from '@pages/tmp/TmpView';
-import '@css/index.css'
+import '@css/reset.css'
 import { Routes, Route } from 'react-router-dom';
 
 // 라우터 - 연결
