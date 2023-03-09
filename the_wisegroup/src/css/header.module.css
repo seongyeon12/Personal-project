@@ -1,0 +1,75 @@
+/* 메인컬러 : #4b312c */
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  padding: 0 60px;
+  transition: all 0.3s;
+  background: #e66352;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+header {
+  height: 80px;
+  transition: all 0.3s;
+}
+
+header:hover {
+  height: 326px;
+  background: #57ff09;
+}
+
+.logo {
+  line-height: 80px;
+  font-size: 20px
+}
+
+.menu {
+  display: flex;
+  width: 770px;
+  justify-content: space-between;
+}
+
+.manuList > li:first-child {
+  line-height: 80px;
+}
+
+.manuList > li:first-child a {
+  position: relative;
+}
+
+.manuList:hover > li:first-child a {
+  color: #4b312c;
+}
+
+.manuList > li:first-child a::after {
+  transform: scaleX(0);
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: -28px;
+  height: 3px;
+  width: 100%;
+  background: #4b312c;
+  transition: transform 500ms ease;
+}
+
+.manuList:hover > li:first-child a::after {
+  transform: scaleX(1);
+  height: 3px;
+}
+
+.subList {
+  padding-top: 30px;
+  height: 216px;
+}
+
+.subList > li:not(:first-child) {
+  padding-top: 15px;
+}
+
+.barIcon {
+  margin-top: 15px;
+}
+
