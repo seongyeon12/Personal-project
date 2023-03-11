@@ -1,32 +1,36 @@
-import styles from '@css/main.module.css'
-import { useRef } from 'react'
+import { Link } from 'react-router-dom';
+import styles from '@css/header.module.css'
 
-/* interface Props {
-  list: string[][]
-} */
+import SubList from '@component/header/SubList'
+import subLists from '@component/header/subLists'
 
-const NavList = (): JSX.Element => {
-/*     const ul = document.getElementsByClassName('menuLists')
-    console.log(ul)
-    
-    const li = document.createElement("li")
-    li.textContent = "list"
-    ul[0]?.appendChild(li) */
+interface Props {
+  text: string
+  link: string
+  num: number
+}
 
+/**
+ * link, text: 첫 리스트 |
+ * num: 0부터 시작, sublists
+ */
+const NavList = ({text, link, num}: Props): JSX.Element => {
+  console.log(subLists[num][0])
   return (
-    <>
-    <ul className={`${styles.menuList}`}>
-      <li>회사소개</li>
+    <ul className={styles.manuList}>
       <li>
-        <ul className={`${styles.menuLists} menuLists`}>
-          <li>dk</li>
-          <li>d</li>
-          <li>d</li>
-          <li>d</li>
+        <Link to={link}>{text}</Link> 
+      </li>
+
+      <li>
+        <ul className={styles.subList}>
+        {subLists[num].map((arr) => <SubList 
+        text={arr[0]}
+        link={arr[1]}
+        ></SubList>)}
         </ul>
       </li>
     </ul>
-    </>
   )
 }
 
