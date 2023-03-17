@@ -1,23 +1,29 @@
 /* 메인컬러 : #4b312c */
-
 .container {
   display: flex;
   justify-content: space-between;
   height: 80px;
   padding: 0 60px;
   transition: all 0.3s;
-  background: #e66352;
+  border-color: #e2e2e2;
+}
+
+header:hover .container {
   border-bottom: 1px solid #e2e2e2;
 }
 
 header {
+  width: 100%;
+  width: 100%;
   height: 80px;
   transition: all 0.3s;
+  overflow: hidden;
+  position: absolute;
 }
 
 header:hover {
   height: 326px;
-  background: #57ff09;
+  background: #ffffff;
 }
 
 .logo {
@@ -27,8 +33,7 @@ header:hover {
 
 .menu {
   display: flex;
-  width: 770px;
-  justify-content: space-between;
+  width: 900px;
 }
 
 .manuList > li:first-child {
@@ -48,25 +53,41 @@ header:hover {
   content: "";
   position: absolute;
   left: 0px;
-  bottom: -28px;
+  bottom: -29px;
   height: 3px;
   width: 100%;
   background: #4b312c;
-  transition: transform 500ms ease;
+  opacity: 0;
+  transition: all 0.3s;
 }
 
 .manuList:hover > li:first-child a::after {
   transform: scaleX(1);
+  opacity: 1;
   height: 3px;
 }
 
 .subList {
   padding-top: 30px;
   height: 216px;
+  width: 150px;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+header:hover .subList {
+  opacity: 1;
 }
 
 .subList > li:not(:first-child) {
   padding-top: 15px;
+}
+
+.subList li a {
+  color: #666;
+}
+.subList li a:hover {
+  color: #4b312c;
 }
 
 .barIcon {
