@@ -1,1 +1,34 @@
 /* 메인컬러 : #4b312c */
+
+body {
+  margin: 0;
+  overflow-y: hidden;
+}
+
+main {
+  height: 100vh;
+  overflow-y: auto;
+}
+
+main::-webkit-scrollbar {
+  display: none;
+}
+
+.content {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+}
+.sec {
+  background: red;
+}
+
+.imgBox > img {
+  width: 100%;
+  height: auto;
+}
+
+/* 푸터영역 */
+
